@@ -1,4 +1,4 @@
-baseURL = "https://oshanwisumperuma.com"
+baseURL = "https://oshanz.github.io"
 title = "Oshan Wisumperuma Blog"
 theme = "hugo-theme-bootstrap"
 copyright = "Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved."
