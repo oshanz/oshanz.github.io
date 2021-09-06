@@ -15,6 +15,7 @@ series = [
   "Manual"
 ]
 images = []
+draft = true
 +++
 
 A detailed description of online IDE shortcodes, such as JSFiddle, CodePen, JSRun.

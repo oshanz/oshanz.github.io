@@ -2,7 +2,7 @@
 title = "Aligning Images"
 description = "Guide to align images"
 date = 2021-08-15T14:19:06+08:00
-draft = false
+draft = true
 comment = true
 toc = true
 reward = true
