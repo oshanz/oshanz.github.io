@@ -1,5 +1,5 @@
 +++
-title = "tools"
+title = "My Favorite Tech Stack for 2022"
 date = "2021-11-02"
 description = "My tools"
 categories = [
@@ -11,8 +11,6 @@ featured = true
 images = []
 toc = true
 +++
-
-My Favorite Tech Stack for 2022
 
 <!--more-->
 
