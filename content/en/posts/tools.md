@@ -15,7 +15,7 @@ toc = true
 <!--more-->
 
 ### Environment
-* [Fedora](https://getfedora.org)
+* [Fedora Plasma](https://spins.fedoraproject.org/en/kde/)
 * [VScode](https://code.visualstudio.com/)
 * [Docker](https://podman.io/)
 
