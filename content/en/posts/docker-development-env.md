@@ -10,7 +10,7 @@ images = [
 ]
 +++
 
-<!-- more -->
+<!--more-->
 
 * Dependancies
     - https://podman.io/
