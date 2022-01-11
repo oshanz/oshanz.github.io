@@ -5,7 +5,7 @@ description = "My tools"
 categories = [
 ]
 tags = [
-    "tech",
+    "Tech Stack",
 ]
 featured = true
 images = []
