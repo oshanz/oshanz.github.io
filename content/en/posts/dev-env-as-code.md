@@ -4,7 +4,7 @@ date = "2022-01-21"
 description = "Development environments as code"
 categories = [
 ]
-tags = ['Docker', 'DevOps']
+tags = ['DevOps']
 featured = true
 images = [
 ]
@@ -17,7 +17,7 @@ images = [
 * Setup the development environment in a "One click"
 * leagacy projects need different packages and host IDE may not intergrate well (linters, formatters, etc)
 * make debugging easier
-* consitent environment between developers
+* consistent environment between developers
 
 ## solutions
 
