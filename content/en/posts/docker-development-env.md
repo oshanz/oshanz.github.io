@@ -4,7 +4,7 @@ date = "2022-01-10"
 description = "Dockerize Devlopment Environment"
 categories = [
 ]
-tags = ['Docker', 'DevOps']
+tags = ['Docker']
 featured = true
 images = [
 ]
