@@ -156,3 +156,17 @@ titleCase = true # Capitalized title.
 
 [mermaid] # See https://mermaid-js.github.io/mermaid/#/Setup?id=configuration
   theme = "dark"
+
+[social]
+  email = "warunaoshan@gmail.com"
+  github = "oshanz"
+  gitlab = "oshanw"
+  linkedin = "in/oshanz"
+  stackoverflow = "3011280/oshan-wisumperuma"
+  twitter = "oshanz"
+  instagram = "oshan.w"
+
+[author]
+  name = "Oshan Wisumperuma"
+  avatar = "images/profile.jpg"
+  bio = "Elixir Alchemist"
