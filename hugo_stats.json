@@ -307,6 +307,7 @@
       "post-content",
       "post-copyright",
       "post-date",
+      "post-featured-img",
       "post-list",
       "post-meta",
       "post-nav",
@@ -419,7 +420,8 @@
       "top-0",
       "top-app-bar",
       "visually-hidden",
-      "w-100"
+      "w-100",
+      "w-auto"
     ],
     "ids": [
       "advanced-search",

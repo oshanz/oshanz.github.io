@@ -9,8 +9,7 @@ tags = [
 ]
 featured = true
 images = [
-  "Screenshot-from-2019-01-31-11-32-10.png"
 ]
 +++
 
-![""](/Screenshot-from-2019-01-31-11-32-10.png)
+![""](/featured-Screenshot-from-2019-01-31-11-32-10.png)

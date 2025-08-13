@@ -55,6 +55,7 @@ titleCase = true # Capitalized title.
   lineNos = false # true/false represents that show/hide the line numbers by default.
 
 [post]
+  featuredImage = true
   # excerpt = "description"
   # excerptMaxLength = 120
 
