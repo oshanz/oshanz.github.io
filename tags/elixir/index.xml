@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Elixir on Oshan Wisumperuma Blog</title><link>/tags/elixir/</link><description>Recent content in Elixir on Oshan Wisumperuma Blog</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved.</copyright><lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/elixir/index.xml" rel="self" type="application/rss+xml"/><item><title>Ruby vs Elixir - Language and Ecosystem Comparison</title><link>/posts/ruby-vs-elixir/</link><pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate><guid>/posts/ruby-vs-elixir/</guid><description>Language Features Feature Ruby Elixir Dynamic Typing Yes Yes Concurrency Green Threds Multi Process Processes Ecosystem</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Elixir on Oshan Wisumperuma Blog</title><link>/tags/elixir/</link><description>Recent content in Elixir on Oshan Wisumperuma Blog</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2013-2025 Oshan Wisumperuma. All Rights Reserved.</copyright><lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/elixir/index.xml" rel="self" type="application/rss+xml"/><item><title>Ruby vs Elixir - Language and Ecosystem Comparison</title><link>/posts/ruby-vs-elixir/</link><pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate><guid>/posts/ruby-vs-elixir/</guid><description><![CDATA[<h2 id="language-features" data-numberify>Language Features<a class="anchor ms-1" href="#language-features"></a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Ruby</th>
+          <th>Elixir</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Dynamic Typing</td>
+          <td>Yes</td>
+          <td>Yes</td>
+      </tr>
+      <tr>
+          <td>Concurrency</td>
+          <td>Green Threds <br/> Multi Process</td>
+          <td>Processes</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="ecosystem" data-numberify>Ecosystem<a class="anchor ms-1" href="#ecosystem"></a></h2>]]></description></item></channel></rss>

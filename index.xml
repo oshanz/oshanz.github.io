@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oshan Wisumperuma Blog</title><link>/</link><description>Recent content on Oshan Wisumperuma Blog</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved.</copyright><lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Ruby vs Elixir - Language and Ecosystem Comparison</title><link>/posts/ruby-vs-elixir/</link><pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate><guid>/posts/ruby-vs-elixir/</guid><description>Language Features Feature Ruby Elixir Dynamic Typing Yes Yes Concurrency Green Threds Multi Process Processes Ecosystem</description></item><item><title>Development environments as code</title><link>/posts/dev-env-as-code/</link><pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate><guid>/posts/dev-env-as-code/</guid><description/></item><item><title>Dockerize Devlopment Environment</title><link>/posts/docker-development-env/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>/posts/docker-development-env/</guid><description/></item><item><title>My Favorite Tech Stack for 2022</title><link>/posts/tools/</link><pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><guid>/posts/tools/</guid><description/></item><item><title>About</title><link>/about/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>/about/</guid><description/></item><item><title>Generator Pattern</title><link>/posts/generator-pattern/</link><pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate><guid>/posts/generator-pattern/</guid><description/></item><item><title>Functional Ruby</title><link>/posts/functional-ruby/</link><pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate><guid>/posts/functional-ruby/</guid><description/></item><item><title>Previous Blog</title><link>/posts/previous-blog/</link><pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate><guid>/posts/previous-blog/</guid><description>https://oshanz.github.io/til/</description></item><item><title/><link>/posts/my_se_philosophy/my_se_philosophy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/my_se_philosophy/my_se_philosophy/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Oshan Wisumperuma Blog</title><link>/</link><description>Recent content on Oshan Wisumperuma Blog</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2013-2025 Oshan Wisumperuma. All Rights Reserved.</copyright><lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Ruby vs Elixir - Language and Ecosystem Comparison</title><link>/posts/ruby-vs-elixir/</link><pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate><guid>/posts/ruby-vs-elixir/</guid><description><![CDATA[<h2 id="language-features" data-numberify>Language Features<a class="anchor ms-1" href="#language-features"></a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Ruby</th>
+          <th>Elixir</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Dynamic Typing</td>
+          <td>Yes</td>
+          <td>Yes</td>
+      </tr>
+      <tr>
+          <td>Concurrency</td>
+          <td>Green Threds <br/> Multi Process</td>
+          <td>Processes</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="ecosystem" data-numberify>Ecosystem<a class="anchor ms-1" href="#ecosystem"></a></h2>]]></description></item><item><title>Development environments as code</title><link>/posts/dev-env-as-code/</link><pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate><guid>/posts/dev-env-as-code/</guid><description></description></item><item><title>Dockerize Devlopment Environment</title><link>/posts/docker-development-env/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>/posts/docker-development-env/</guid><description></description></item><item><title>My Favorite Tech Stack for 2022</title><link>/posts/tools/</link><pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><guid>/posts/tools/</guid><description></description></item><item><title>Generator Pattern</title><link>/posts/generator-pattern/</link><pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate><guid>/posts/generator-pattern/</guid><description><![CDATA[<p><picture><img class="img-fluid " alt="&quot;&quot;" src="/posts/generator-pattern/featured-Screenshot-from-2019-02-24-12-25-57.png" loading="lazy" width="670" height="390" />
+</picture>
+
+</p>]]></description><enclosure url="/posts/generator-pattern/featured-Screenshot-from-2019-02-24-12-25-57.png" length="49491" type="image/png"/></item><item><title>Functional Ruby</title><link>/posts/functional-ruby/</link><pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate><guid>/posts/functional-ruby/</guid><description><![CDATA[<p><picture><img class="img-fluid " alt="&quot;&quot;" src="/posts/functional-ruby/featured-Screenshot-from-2019-01-31-11-32-10.png" loading="lazy" width="638" height="612" />
+</picture>
+
+</p>]]></description><enclosure url="/posts/functional-ruby/featured-Screenshot-from-2019-01-31-11-32-10.png" length="80099" type="image/png"/></item><item><title>Previous Blog</title><link>/posts/previous-blog/</link><pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate><guid>/posts/previous-blog/</guid><description><![CDATA[<p><a href="https://oshanz.github.io/til/" target="_blank" rel="noopener noreferrer">https://oshanz.github.io/til/<i class="fas fa-external-link-square-alt ms-1"></i></a></p>]]></description></item><item><title/><link>/posts/my_se_philosophy/my_se_philosophy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/my_se_philosophy/my_se_philosophy/</guid><description></description></item></channel></rss>
