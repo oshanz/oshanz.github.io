@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oshan</title>
+    <title>site under construction</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on Oshan</description>
+    <description>Recent content on site under construction</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Dec 2025 12:19:21 +1100</lastBuildDate>
@@ -27,7 +27,7 @@
       <link>//localhost:1313/about/</link>
       <pubDate>Mon, 15 Dec 2025 11:52:09 +1100</pubDate>
       <guid>//localhost:1313/about/</guid>
-      <description>&lt;p&gt;sdfsdf&lt;/p&gt;</description>
+      <description></description>
     </item>
   </channel>
 </rss>
