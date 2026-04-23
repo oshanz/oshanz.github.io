@@ -4,6 +4,8 @@
       "a",
       "article",
       "body",
+      "button",
+      "circle",
       "code",
       "div",
       "footer",
@@ -20,10 +22,12 @@
       "nav",
       "ol",
       "p",
+      "path",
       "pre",
       "script",
       "span",
       "style",
+      "svg",
       "title",
       "ul"
     ],
@@ -34,19 +38,17 @@
       "gallery-grid",
       "gallery-item",
       "highlight",
-      "post-list"
+      "moon-icon",
+      "nav-links",
+      "post-list",
+      "sun-icon"
     ],
     "ids": [
-      "backend-frameworks",
-      "communicatioin",
-      "database",
       "distrobox",
-      "environment",
-      "frontend-frameworks",
       "reference",
       "solutions",
+      "theme-toggle",
       "toolbox",
-      "web",
       "why"
     ]
   }
