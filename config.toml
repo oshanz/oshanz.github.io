@@ -1,7 +1,2 @@
 [build]
   writeStats = true
-[taxonomies]
-  author = 'authors'
-  category = 'categories'
-  series = 'series'
-  tag = 'tags'

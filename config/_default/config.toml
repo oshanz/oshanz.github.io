@@ -1,6 +1,5 @@
 baseURL = "https://oshanz.github.io"
 title = "Oshan Wisumperuma Blog"
-copyright = "Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved."
 
 # Multilingual mode
 # defaultContentLanguage = "en"
