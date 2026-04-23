@@ -11,4 +11,3 @@ readingTime = false
   weight = 10
   pre = '<i class="fas fa-fw fa-user"></i>'
 +++
-

@@ -5,7 +5,6 @@
   <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     <span class="date">{{ .Date | dateFormat "January 2, 2006" }}</span>
-    {{ with .Summary }}<p>{{ . }}</p>{{ end }}
   </li>
   {{ end }}
 </ul>
