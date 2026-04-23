@@ -1,6 +1,5 @@
 baseURL = "https://oshanz.github.io"
 title = "Oshan Wisumperuma Blog"
-theme = "hugo-theme-bootstrap"
 copyright = "Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved."
 
 # Multilingual mode
@@ -30,7 +29,7 @@ pygmentsUseClasses = true
   hrefTargetBlank = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [taxonomies]
   category = "categories"
