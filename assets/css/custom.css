@@ -1,0 +1,24 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.25rem 0 0;
+}

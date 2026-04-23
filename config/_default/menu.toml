@@ -1,3 +1,13 @@
+[[main]]
+  name = "Gallery"
+  url = "/en/gallery/"
+  weight = 10
+
+# [[main]]
+#   name = "Tags"
+#   url = "/tags/"
+#   weight = 30
+
 # [[main]]
 #   name = "Dropdown"
 #   identifier = "dropdown"

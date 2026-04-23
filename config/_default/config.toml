@@ -4,7 +4,7 @@ copyright = "Copyright © 2013-{year} Oshan Wisumperuma. All Rights Reserved."
 
 # Multilingual mode
 # defaultContentLanguage = "en"
-# defaultContentLanguageInSubdir = true # If you use only one language comment this option
+# defaultContentLanguageInSubdir = true
 disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # For disable one or more language
 
 # Pagination

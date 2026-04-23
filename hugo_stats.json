@@ -14,6 +14,7 @@
       "html",
       "img",
       "li",
+      "link",
       "main",
       "meta",
       "nav",
@@ -29,6 +30,9 @@
     "classes": [
       "chroma",
       "date",
+      "gallery-caption",
+      "gallery-grid",
+      "gallery-item",
       "highlight",
       "post-list"
     ],

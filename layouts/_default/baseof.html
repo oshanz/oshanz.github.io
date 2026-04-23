@@ -18,6 +18,8 @@
     .post-list li { margin-bottom: 1.5rem; }
     .post-list .date { color: #666; font-size: 0.85rem; }
   </style>
+  {{ $css := resources.Get "css/custom.css" }}
+  {{ with $css }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 </head>
 <body>
   <nav>
