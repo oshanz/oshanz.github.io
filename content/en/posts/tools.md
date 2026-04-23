@@ -10,6 +10,7 @@ tags = [
 featured = true
 images = []
 toc = true
+draft=true
 +++
 
 <!--more-->
