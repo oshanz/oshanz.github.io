@@ -1,6 +1,11 @@
 [[main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[main]]
   name = "Gallery"
-  url = "/en/gallery/"
+  url = "/gallery/"
   weight = 10
 
 # [[main]]
