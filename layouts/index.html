@@ -12,4 +12,20 @@
   </ul>
   <a href="/blog/">See all notes →</a>
 </section>
+
+<section class="recent-shots">
+  <h2>Recent Shots</h2>
+  {{ $photos := hugo.Data.gallery }}
+  {{ $sorted := sort $photos "date" "desc" }}
+  <div class="gallery-grid">
+    {{ range first 3 $sorted }}
+    <div class="gallery-item">
+      <img src="/images/gallery/{{ .file }}" alt="{{ .caption }}">
+      {{ with .caption }}<p class="gallery-caption">{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  <a href="/gallery/">See all shots →</a>
+</section>
+
 {{ end }}
