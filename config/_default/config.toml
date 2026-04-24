@@ -1,32 +1,12 @@
 baseURL = "https://oshanz.github.io"
 title = "Oshan Wisumperuma"
 
-
-# Pagination
 pagination.pagerSize = 6
-# paginatePath = "page"
-
-# Disqus
-# disqusShortname = "yourdiscussshortname"
-
-# Google analytics
-# googleAnalytics = "UA-123-45"
 
 enableRobotsTXT = true
-
 enableEmoji = true
 
-# hasCJKLanguage = true # Turn on it if your content contains Chinese/Japanese/Korean Languages.
-
-pygmentsUseClasses = true
-
-[blackfriday]
-  hrefTargetBlank = true
+disableKinds = []
 
 [outputs]
   home = ["HTML", "RSS"]
-
-[taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
