@@ -25,6 +25,7 @@
       "path",
       "pre",
       "script",
+      "section",
       "span",
       "style",
       "svg",
@@ -41,6 +42,7 @@
       "moon-icon",
       "nav-links",
       "post-list",
+      "recent-notes",
       "sun-icon"
     ],
     "ids": [

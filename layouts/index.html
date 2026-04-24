@@ -1,2 +1,15 @@
 {{ define "main" }}
+
+<section class="recent-notes">
+  <h2>Recent Notes</h2>
+  <ul class="post-list">
+    {{ with .Site.GetPage "/posts" }}{{ range first 3 .Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="date">{{ .Date | dateFormat "January 2, 2006" }}</span>
+    </li>
+    {{ end }}{{ end }}
+  </ul>
+  <a href="/blog/">See all notes →</a>
+</section>
 {{ end }}
