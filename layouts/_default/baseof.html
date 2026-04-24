@@ -9,13 +9,14 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ partial "seo.html" . }}
-  {{ $themeInit := resources.Get "js/theme-init.js" }}
-  {{ with $themeInit }}<script src="{{ .RelPermalink }}"></script>{{ end }}
-  {{ $css := resources.Get "css/custom.css" }}
-  {{ with $css }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+  {{ $themeInit := resources.Get "js/theme-init.js" | minify }}
+  {{ with $themeInit }}<script>{{ .Content | safeJS }}</script>{{ end }}
+  {{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
+  {{ with $css }}<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">{{ end }}
 </head>
 <body>
-  <nav>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav aria-label="Site">
     <div class="nav-links">
       <a href="{{ "/" | relURL }}">Home</a>
       {{ range .Site.Menus.main }}
@@ -32,9 +33,9 @@
       </svg>
     </button>
   </nav>
-  {{ $themeToggle := resources.Get "js/theme-toggle.js" }}
-  {{ with $themeToggle }}<script src="{{ .RelPermalink }}" defer></script>{{ end }}
-  <main>
+  {{ $themeToggle := resources.Get "js/theme-toggle.js" | minify | fingerprint }}
+  {{ with $themeToggle }}<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>{{ end }}
+  <main id="main-content" tabindex="-1">
     {{ block "main" . }}{{ end }}
   </main>
   <footer>

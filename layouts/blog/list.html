@@ -4,7 +4,7 @@
   {{ with .Site.GetPage "/posts" }}{{ range .Pages }}
   <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <span class="date">{{ .Date | dateFormat "January 2, 2006" }}</span>
+    <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | dateFormat "January 2, 2006" }}</time>
   </li>
   {{ end }}{{ end }}
 </ul>
