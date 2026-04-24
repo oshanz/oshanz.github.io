@@ -1,2 +1,4 @@
 User-agent: *
-Sitemap: /sitemap.xml
+Allow: /
+
+Sitemap: https://oshanz.github.io/sitemap.xml
