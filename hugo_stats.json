@@ -16,6 +16,7 @@
       "html",
       "img",
       "li",
+      "line",
       "link",
       "main",
       "meta",
@@ -24,10 +25,11 @@
       "p",
       "path",
       "pre",
+      "rect",
       "script",
       "section",
       "span",
-      "style",
+      "strong",
       "svg",
       "title",
       "ul"
@@ -44,9 +46,11 @@
       "post-list",
       "recent-notes",
       "recent-shots",
+      "social-links",
       "sun-icon"
     ],
     "ids": [
+      "disposable_email",
       "distrobox",
       "reference",
       "solutions",
