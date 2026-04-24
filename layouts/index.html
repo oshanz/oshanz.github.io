@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section class="recent-notes">
-  <h2>Recent Notes</h2>
+  <h2>Notes</h2>
   <ul class="post-list">
     {{ with .Site.GetPage "/posts" }}{{ range first 3 .Pages }}
     <li>
@@ -14,7 +14,7 @@
 </section>
 
 <section class="recent-shots">
-  <h2>Recent Shots</h2>
+  <h2>Shots</h2>
   {{ $photos := hugo.Data.gallery }}
   {{ $sorted := sort $photos "date" "desc" }}
   <div class="gallery-grid">
