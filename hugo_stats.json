@@ -36,6 +36,7 @@
       "ul"
     ],
     "classes": [
+      "about-page",
       "chroma",
       "date",
       "gallery-caption",

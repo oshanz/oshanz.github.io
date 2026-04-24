@@ -127,6 +127,16 @@ footer { margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 1re
   }
 }
 
+.about-page img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  border: 2px solid var(--border);
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
