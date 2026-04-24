@@ -2,7 +2,7 @@
 <h1>{{ .Title }}</h1>
 {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}
 
-{{ $photos := hugo.Data.gallery }}
+{{ $photos := .Resources.Get "gallery.yaml" | transform.Unmarshal }}
 {{ $sorted := sort $photos "date" "desc" }}
 
 {{/* collect unique years in descending order */}}
@@ -21,7 +21,7 @@
     {{ range $sorted }}
       {{ if eq (substr .date 0 4) $year }}
         <div class="gallery-item">
-          <img src="/images/gallery/{{ .file }}" alt="{{ .caption }}">
+          <img src="/gallery/images/{{ .file }}" alt="{{ .caption }}" loading="lazy" decoding="async">
           {{ with .caption }}<p class="gallery-caption">{{ . }}</p>{{ end }}
         </div>
       {{ end }}

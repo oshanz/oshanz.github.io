@@ -16,7 +16,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `layouts/_default/baseof.html` — shell: nav, theme toggle, footer, inline CSS variables for light/dark mode
 - `layouts/index.html` — home page: shows 3 most recent posts from `/posts` section
 - `layouts/blog/list.html` — blog listing, pulls all pages from the `/posts` section (not `/blog/`)
-- `layouts/gallery/list.html` — gallery listing, reads from `data/gallery.yaml` via `hugo.Data.gallery`
+- `layouts/gallery/list.html` — gallery listing, reads from `content/gallery/gallery.yaml` via `.Resources.Get` + `transform.Unmarshal`
 - `layouts/_default/single.html` / `layouts/_default/list.html` — default fallbacks
 
 ## Content Sections & Routing
@@ -36,7 +36,7 @@ Blog listing (`/blog/`) renders posts from `content/posts/` via `.Site.GetPage "
 - Nav links come from `config/_default/menu.toml` — add `[[main]]` entries there
 
 ## Gallery
-- Photos are stored in `static/images/gallery/` and referenced from `data/gallery.yaml`
+- Photos are stored in `content/gallery/images/` and referenced from `content/gallery/gallery.yaml`
 - `gallery.yaml` fields: `file`, `date` (YYYY-MM-DD), `caption`, `type`
 - Gallery is sorted by `date` descending, grouped by year
 - `gallery-data/convert.rb` converts images to WebP at 400px width using ffmpeg (`gallery-data/in/` → `gallery-data/out/`)
