@@ -1,8 +1,8 @@
 # Hugo Site — oshanz.github.io
 
 ## Stack
-- Hugo v0.160 extended, branch `jfrom-scratch` is a from-scratch rebuild (no theme)
-- Content under `content/en/`, TOML front matter (`+++ ... +++`)
+- Hugo v0.160 extended, from-scratch rebuild (no theme)
+- Content under `content/`, TOML front matter (`+++ ... +++`)
 - All global CSS is inline in `layouts/_default/baseof.html`; `assets/css/custom.css` is loaded via `resources.Get` in baseof
 
 ## Hugo Quirks
