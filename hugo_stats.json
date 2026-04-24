@@ -45,6 +45,7 @@
       "moon-icon",
       "nav-links",
       "post-list",
+      "project-content",
       "recent-notes",
       "recent-shots",
       "skip-link",
@@ -53,8 +54,10 @@
       "sun-icon"
     ],
     "ids": [
+      "bendigo-bank",
       "disposable_email",
       "distrobox",
+      "iucn-red-list",
       "main-content",
       "reference",
       "solutions",
