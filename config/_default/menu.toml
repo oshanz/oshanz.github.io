@@ -1,3 +1,28 @@
+[[main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[main]]
+  name = "Gallery"
+  url = "/gallery/"
+  weight = 10
+
+[[main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 15
+
+[[main]]
+  name = "About"
+  url = "/about/"
+  weight = 20
+
+# [[main]]
+#   name = "Tags"
+#   url = "/tags/"
+#   weight = 30
+
 # [[main]]
 #   name = "Dropdown"
 #   identifier = "dropdown"

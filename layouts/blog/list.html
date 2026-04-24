@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul class="post-list">
+  {{ with .Site.GetPage "/posts" }}{{ range .Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | dateFormat "January 2, 2006" }}</time>
+  </li>
+  {{ end }}{{ end }}
+</ul>
+{{ end }}

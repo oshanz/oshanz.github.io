@@ -3,3 +3,6 @@ public/
 hugo
 
 node_modules/
+
+gallery-data/in/
+gallery-data/out/
