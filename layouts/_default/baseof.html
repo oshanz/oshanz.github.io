@@ -18,9 +18,9 @@
   <a href="#main-content" class="skip-link">Skip to content</a>
   <nav aria-label="Site">
     <div class="nav-links">
-      <a href="{{ "/" | relURL }}">Home</a>
+      <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="nav-active" aria-current="page"{{ end }}>Home</a>
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ .URL }}"{{ if hasPrefix $.RelPermalink .URL }} class="nav-active" aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </div>
     <button id="theme-toggle" aria-label="Toggle theme">

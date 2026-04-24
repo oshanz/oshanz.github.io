@@ -68,7 +68,8 @@ nav {
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 a { color: var(--accent); }
-nav a { margin-right: 1rem; text-decoration: none; }
+nav a { margin-right: 1rem; text-decoration: none; color: var(--muted); padding-bottom: 2px; border-bottom: 2px solid transparent; }
+nav a.nav-active { color: var(--text); border-bottom-color: var(--accent); }
 .nav-links { display: flex; align-items: center; }
 #theme-toggle {
   background: none;
