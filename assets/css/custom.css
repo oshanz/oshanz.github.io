@@ -116,6 +116,81 @@ footer { margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 1re
   display: block;
 }
 
+.tech-stack {
+  margin: 3rem 0;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tech-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-item h3 svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5px;
+  color: var(--muted);
+}
+
+.tech-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-item li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--code-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.tech-item li svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Brand Colors */
+.tech-ruby svg { color: #CC342D; }
+.tech-go svg { color: #00ADD8; }
+.tech-elixir svg { color: #A35BB3; }
+.tech-postgres svg { color: #336791; }
+.tech-redis svg { color: #D82C20; }
+.tech-typescript svg { color: #3178C6; }
+.tech-react svg { color: #61DAFB; }
+.tech-docker svg { color: #2496ED; }
+.tech-aws svg { color: #FF9900; }
+.tech-cicd svg { color: #4CAF50; }
+.tech-claude svg { color: #D97757; }
+
 .gallery-caption {
   font-size: 0.85rem;
   color: var(--muted);

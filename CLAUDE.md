@@ -44,6 +44,12 @@ Blog listing (`/blog/`) renders posts from `content/posts/` via `.Site.GetPage "
 - Gallery is sorted by `date` descending, grouped by year
 - `gallery-data/convert.rb` converts images to WebP at 400px width using ffmpeg (`gallery-data/in/` → `gallery-data/out/`)
 
+## Tech Stack
+- Hardcoded in `layouts/index.html` as a grid of categories (Backend, Data, Frontend, Tools)
+- Uses inline SVGs for all icons
+- Tech-specific icon colors are defined in `assets/css/custom.css` via `.tech-<name> svg` classes (e.g., `.tech-ruby`)
+- Items are styled as "pills" using `background: var(--code-bg)` and `border-radius: 4px`
+
 ## Styling
 - CSS custom properties and all global styles are in `assets/css/custom.css`, loaded via `resources.Get` in `baseof.html`
 - Dark mode via `[data-theme="dark"]` on `<html>`, toggled by JS in `baseof.html`, persisted to `localStorage`
