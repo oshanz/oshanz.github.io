@@ -13,10 +13,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - CI deploys from `master` branch via `.github/workflows/gh-pages.yml` using `hugo --minify --gc --enableGitInfo`
 
 ## Layout Architecture
-- `layouts/_default/baseof.html` — shell: nav, theme toggle, footer, inline CSS variables for light/dark mode
-- `layouts/index.html` — home page: shows 3 most recent posts from `/posts` section
+- `layouts/_default/baseof.html` — shell: nav, theme toggle, footer
+- `layouts/index.html` — home page: shows 3 most recent posts from `/posts` and 3 recent gallery shots
 - `layouts/blog/list.html` — blog listing, pulls all pages from the `/posts` section (not `/blog/`)
 - `layouts/gallery/list.html` — gallery listing, reads from `content/gallery/gallery.yaml` via `.Resources.Get` + `transform.Unmarshal`
+- `layouts/about/list.html` — about page layout
+- `layouts/projects/list.html` — projects page layout
+- `layouts/projects/_markup/render-image.html` — custom image renderer for projects (lazy loading)
 - `layouts/_default/single.html` / `layouts/_default/list.html` — default fallbacks
 
 ## Content Sections & Routing
@@ -25,8 +28,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `/blog/` | `content/blog/_index.md` (`type = "blog"`) | `layouts/blog/list.html` |
 | `/gallery/` | `content/gallery/_index.md` (`type = "gallery"`) | `layouts/gallery/list.html` |
 | `/posts/…` | `content/posts/` | `layouts/_default/single.html` |
-| `/projects/` | `content/projects/_index.md` | `layouts/_default/list.html` |
-| `/about/` | `content/about/_index.md` | `layouts/_default/single.html` |
+| `/projects/` | `content/projects/_index.md` (`type = "projects"`) | `layouts/projects/list.html` |
+| `/about/` | `content/about/_index.md` (`type = "about"`) | `layouts/about/list.html` |
 
 Blog listing (`/blog/`) renders posts from `content/posts/` via `.Site.GetPage "/posts"` — posts live in `/posts/` not `/blog/`.
 
@@ -42,6 +45,6 @@ Blog listing (`/blog/`) renders posts from `content/posts/` via `.Site.GetPage "
 - `gallery-data/convert.rb` converts images to WebP at 400px width using ffmpeg (`gallery-data/in/` → `gallery-data/out/`)
 
 ## Styling
-- CSS custom properties defined in `baseof.html` `<style>` block: `--bg`, `--text`, `--muted`, `--accent`, `--border`, `--code-bg`
+- CSS custom properties and all global styles are in `assets/css/custom.css`, loaded via `resources.Get` in `baseof.html`
 - Dark mode via `[data-theme="dark"]` on `<html>`, toggled by JS in `baseof.html`, persisted to `localStorage`
-- Section/component-specific styles go in `assets/css/custom.css` (currently holds gallery grid styles)
+- The `assets/js/theme-init.js` is inlined in `<head>` to prevent flash of unstyled content (FOCU)
