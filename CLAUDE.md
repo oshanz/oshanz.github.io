@@ -15,7 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Layout Architecture
 - `layouts/_default/baseof.html` — shell: nav, theme toggle, footer
 - `layouts/index.html` — home page: shows 3 most recent posts from `/posts` and 3 recent gallery shots
-- `layouts/blog/list.html` — blog listing, pulls all pages from the `/posts` section (not `/blog/`)
+- `layouts/posts/list.html` — blog listing
 - `layouts/gallery/list.html` — gallery listing, reads from `content/gallery/gallery.yaml` via `.Resources.Get` + `transform.Unmarshal`
 - `layouts/about/list.html` — about page layout
 - `layouts/projects/list.html` — projects page layout
@@ -25,13 +25,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Content Sections & Routing
 | URL | Content source | Layout |
 |-----|---------------|--------|
-| `/blog/` | `content/blog/_index.md` (`type = "blog"`) | `layouts/blog/list.html` |
+| `/posts/` | `content/posts/_index.md` | `layouts/posts/list.html` |
 | `/gallery/` | `content/gallery/_index.md` (`type = "gallery"`) | `layouts/gallery/list.html` |
 | `/posts/…` | `content/posts/` | `layouts/_default/single.html` |
 | `/projects/` | `content/projects/_index.md` (`type = "projects"`) | `layouts/projects/list.html` |
 | `/about/` | `content/about/_index.md` (`type = "about"`) | `layouts/about/list.html` |
 
-Blog listing (`/blog/`) renders posts from `content/posts/` via `.Site.GetPage "/posts"` — posts live in `/posts/` not `/blog/`.
+Blog listing renders posts from `content/posts/`.
 
 ## Hugo Quirks
 - Section-specific layouts require explicit `type = "..."` in the section's `_index.md` — Hugo does NOT auto-resolve by directory name alone (e.g. `type = "gallery"` enables `layouts/gallery/list.html`)
