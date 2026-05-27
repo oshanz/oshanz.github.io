@@ -73,7 +73,7 @@ nav a.nav-active { color: var(--text); border-bottom-color: var(--accent); }
 .nav-links { display: flex; align-items: center; }
 #theme-toggle {
   background: none;
-  border: 1px solid var(--border);
+  border: 1px solid #767676;
   border-radius: 6px;
   padding: 0.35rem;
   cursor: pointer;
@@ -83,6 +83,7 @@ nav a.nav-active { color: var(--text); border-bottom-color: var(--accent); }
   justify-content: center;
   transition: border-color 0.2s ease;
 }
+[data-theme="dark"] #theme-toggle { border-color: #6b7a92; }
 #theme-toggle:hover { border-color: var(--accent); }
 #theme-toggle svg { width: 18px; height: 18px; }
 .sun-icon, [data-theme="dark"] .moon-icon { display: block; }
