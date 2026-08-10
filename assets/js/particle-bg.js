@@ -383,7 +383,26 @@
     };
     const flipKeys = Object.keys(flippable);
     const flipAngle = {};
-    flipKeys.forEach(function(key) { flipAngle[key] = 0; });
+    const STORAGE_KEY = 'particle-bg-flip-state';
+    let savedState = null;
+    try {
+      savedState = JSON.parse(sessionStorage.getItem(STORAGE_KEY));
+    } catch (e) {
+      savedState = null;
+    }
+    flipKeys.forEach(function(key) {
+      flipAngle[key] = (savedState && typeof savedState[key] === 'number') ? savedState[key] : 0;
+    });
+
+    function saveState() {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(flipAngle));
+      } catch (e) {
+        // ignore (private browsing / storage disabled)
+      }
+    }
+
+    window.addEventListener('pagehide', saveState);
 
     function drawFlippable(key, rgb) {
       const shape = flippable[key];
