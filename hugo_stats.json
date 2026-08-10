@@ -5,6 +5,7 @@
       "article",
       "body",
       "button",
+      "canvas",
       "circle",
       "code",
       "div",
@@ -74,6 +75,7 @@
     ],
     "ids": [
       "bendigo-bank",
+      "bg-particles",
       "disposable_email",
       "distrobox",
       "iucn-red-list",

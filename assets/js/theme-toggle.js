@@ -14,5 +14,6 @@
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     toggle.setAttribute('aria-label', labelFor(next));
+    document.dispatchEvent(new CustomEvent('themechange'));
   });
 })();

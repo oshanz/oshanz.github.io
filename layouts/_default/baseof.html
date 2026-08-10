@@ -18,6 +18,7 @@
   {{ with $css }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 </head>
 <body>
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <nav aria-label="Site">
     <div class="nav-links">
@@ -44,5 +45,7 @@
   <footer>
     Copyright &copy; 2013–{{ now.Year }} Oshan Wisumperuma. All Rights Reserved.
   </footer>
+  {{ $particleBg := resources.Get "js/particle-bg.js" | minify | fingerprint }}
+  {{ with $particleBg }}<script src="{{ .RelPermalink }}" defer></script>{{ end }}
 </body>
 </html>
