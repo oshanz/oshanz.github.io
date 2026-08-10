@@ -374,6 +374,33 @@
       ctx.restore();
     }
 
+    const flippable = {
+      arcs: { fn: drawArcs, getCenter: function() { return { x: width - UNIT * 4, y: height + UNIT * 2 }; } },
+      protractor: { fn: drawProtractor, getCenter: function() { return { x: width - UNIT * 3, y: height - UNIT * 5 }; } },
+      hexTemplate: { fn: drawHexTemplate, getCenter: function() { return { x: UNIT * 6, y: UNIT * 6 }; } },
+      compassCircles: { fn: drawCompassCircles, getCenter: function() { return { x: UNIT * 5, y: height / 2 }; } },
+      crosshairTarget: { fn: drawCrosshairTarget, getCenter: function() { return { x: UNIT * 4, y: height - UNIT * 4 }; } }
+    };
+    const flipKeys = Object.keys(flippable);
+    const flipAngle = {};
+    flipKeys.forEach(function(key) { flipAngle[key] = 0; });
+
+    function drawFlippable(key, rgb) {
+      const shape = flippable[key];
+      const angle = flipAngle[key];
+      if (angle === 0) {
+        shape.fn(rgb);
+        return;
+      }
+      const c = shape.getCenter();
+      ctx.save();
+      ctx.translate(c.x, c.y);
+      ctx.rotate(angle);
+      ctx.translate(-c.x, -c.y);
+      shape.fn(rgb);
+      ctx.restore();
+    }
+
     function draw() {
       ctx.clearRect(0, 0, width, height);
       const rgb = hexToRgb(accentColor);
@@ -385,17 +412,52 @@
 
       drawGrid(rgb, cols, rows);
       drawLongDiagonal(rgb);
-      drawArcs(rgb);
-      drawProtractor(rgb);
+      drawFlippable('arcs', rgb);
+      drawFlippable('protractor', rgb);
       drawDimensionLine(rgb);
       drawVerticalDimension(rgb);
-      drawHexTemplate(rgb);
-      drawCompassCircles(rgb);
-      drawCrosshairTarget(rgb);
+      drawFlippable('hexTemplate', rgb);
+      drawFlippable('compassCircles', rgb);
+      drawFlippable('crosshairTarget', rgb);
       drawEdgeTicks(rgb, cols, rows);
       drawRuler(rgb, cols, rows);
 
       ctx.restore();
+    }
+
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    }
+
+    let activeFlip = null;
+    let flipTimer;
+
+    function tickFlip(now) {
+      if (!activeFlip) return;
+      const t = Math.min(1, (now - activeFlip.start) / activeFlip.duration);
+      flipAngle[activeFlip.key] = activeFlip.from + (activeFlip.to - activeFlip.from) * easeInOutQuad(t);
+      draw();
+      if (t < 1) {
+        requestAnimationFrame(tickFlip);
+      } else {
+        activeFlip = null;
+        scheduleNextFlip();
+      }
+    }
+
+    function startRandomFlip() {
+      const key = flipKeys[Math.floor(Math.random() * flipKeys.length)];
+      const from = flipAngle[key];
+      const degrees = 8 + Math.random() * 12;
+      const direction = Math.random() < 0.5 ? -1 : 1;
+      const delta = degrees * (Math.PI / 180) * direction;
+      activeFlip = { key: key, from: from, to: from + delta, start: performance.now(), duration: 130 };
+      requestAnimationFrame(tickFlip);
+    }
+
+    function scheduleNextFlip() {
+      const delay = 100 + Math.random() * 250;
+      flipTimer = setTimeout(startRandomFlip, delay);
     }
 
     function resize() {
@@ -417,6 +479,7 @@
     });
 
     resize();
+    scheduleNextFlip();
 
     return {
       refreshColor: function() {
