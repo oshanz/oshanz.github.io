@@ -1,11 +1,8 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Stack
 - Hugo v0.160 extended, from-scratch rebuild (no theme)
 - Content under `content/`, TOML front matter (`+++ ... +++`)
 - All global CSS is inline in `layouts/_default/baseof.html`; `assets/css/custom.css` is loaded via `resources.Get` in baseof
+- Config split across `config.toml` (build settings) and `config/_default/*.toml` (config.toml, markup.toml, menu.toml, params.toml, server.toml)
 
 ## Build
 - `hugo server` — local dev server
@@ -21,6 +18,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `layouts/projects/list.html` — projects page layout
 - `layouts/projects/_markup/render-image.html` — custom image renderer for projects (lazy loading)
 - `layouts/_default/single.html` / `layouts/_default/list.html` — default fallbacks
+- `layouts/partials/seo.html` — shared SEO meta partial
 
 ## Content Sections & Routing
 | URL | Content source | Layout |
@@ -49,6 +47,9 @@ Blog listing renders posts from `content/posts/`.
 - Uses inline SVGs for all icons
 - Tech-specific icon colors are defined in `assets/css/custom.css` via `.tech-<name> svg` classes (e.g., `.tech-ruby`)
 - Items are styled as "pills" using `background: var(--code-bg)` and `border-radius: 4px`
+
+## Accessibility
+- Target WCAG 2.1 Level AA compliance
 
 ## Styling
 - CSS custom properties and all global styles are in `assets/css/custom.css`, loaded via `resources.Get` in `baseof.html`
