@@ -23,7 +23,7 @@
       '#bg-particles .edge-minor { stroke-opacity: 0.3; }',
       '#bg-particles .edge-major { stroke-opacity: 0.5; }',
       '#bg-particles .ruler-text { fill-opacity: 0.4; }',
-      '#bg-particles .diagonal { stroke-opacity: 0.16; stroke-dasharray: 6 5; }',
+      '#bg-particles .diagonal { stroke-opacity: 0.35; stroke-dasharray: 6 5; }',
       '#bg-particles .arc-line { stroke-opacity: 0.18; }',
       '#bg-particles .arc-text { fill-opacity: 0.32; text-anchor: middle; dominant-baseline: middle; }',
       '#bg-particles .protractor-fill { fill: var(--accent); fill-opacity: 0.05; stroke: none; }',
@@ -105,7 +105,8 @@
   }
 
   function buildLongDiagonal(width, height) {
-    return el('path', { class: 'diagonal', d: 'M0 ' + height + 'L' + width + ' 0' });
+    const offset = UNIT * 3;
+    return el('path', { class: 'diagonal', d: 'M0 ' + (height + offset) + 'L' + width + ' ' + offset });
   }
 
   function buildArcs(width, height) {
