@@ -23,7 +23,7 @@
       '#bg-particles .edge-minor { stroke-opacity: 0.3; }',
       '#bg-particles .edge-major { stroke-opacity: 0.5; }',
       '#bg-particles .ruler-text { fill-opacity: 0.4; }',
-      '#bg-particles .diagonal { stroke-opacity: 0.35; stroke-dasharray: 6 5; }',
+      '#bg-particles .diagonal { stroke-opacity: 0.22; stroke-dasharray: 6 5; }',
       '#bg-particles .arc-line { stroke-opacity: 0.18; }',
       '#bg-particles .arc-text { fill-opacity: 0.32; text-anchor: middle; dominant-baseline: middle; }',
       '#bg-particles .protractor-fill { fill: var(--accent); fill-opacity: 0.05; stroke: none; }',
@@ -34,6 +34,9 @@
       '#bg-particles .protractor-diag { stroke-opacity: 0.22; }',
       '#bg-particles .dim-line { stroke-opacity: 0.22; }',
       '#bg-particles .dim-text { fill-opacity: 0.4; }',
+      '#bg-particles .dim-line-top { stroke-opacity: 0.22; }',
+      '#bg-particles .dim-text-top { fill: #39ff14; fill-opacity: 0.35; animation: dim-text-move 24s ease-in-out infinite; }',
+      '@keyframes dim-text-move { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(var(--dim-offset, 0px)); } }',
       '#bg-particles .hex-outer { stroke-opacity: 0.2; }',
       '#bg-particles .hex-spoke { stroke-opacity: 0.12; }',
       '#bg-particles .compass-circle { stroke-opacity: 0.18; }',
@@ -181,14 +184,19 @@
     const arrow = 5;
     const g = el('g', {});
     g.appendChild(el('path', {
-      class: 'dim-line',
+      class: 'dim-line-top',
       d: 'M' + x1 + ' ' + (y - UNIT * 0.4) + 'L' + x1 + ' ' + (y + 5) +
         'M' + x2 + ' ' + (y - UNIT * 0.4) + 'L' + x2 + ' ' + (y + 5) +
         'M' + x1 + ' ' + y + 'L' + x2 + ' ' + y +
         'M' + (x1 + arrow) + ' ' + (y - arrow / 2) + 'L' + x1 + ' ' + y + 'L' + (x1 + arrow) + ' ' + (y + arrow / 2) +
         'M' + (x2 - arrow) + ' ' + (y - arrow / 2) + 'L' + x2 + ' ' + y + 'L' + (x2 - arrow) + ' ' + (y + arrow / 2)
     }));
-    g.appendChild(text((x1 + x2) / 2, y - 3, Math.round((x2 - x1) / UNIT * 10), 'dim-text', { 'text-anchor': 'middle', 'dominant-baseline': 'text-after-edge' }));
+    const baseValue = 42;
+    const dimText = text((x1 + x2) / 2, y - 3, baseValue, 'dim-text-top', { 'text-anchor': 'middle', 'dominant-baseline': 'text-after-edge' });
+    dimText.style.setProperty('--dim-offset', ((x2 - x1) / 2 - 6) + 'px');
+    dimText.dataset.baseValue = baseValue;
+    g.appendChild(dimText);
+    currentDimText = dimText;
     return g;
   }
 
@@ -271,6 +279,20 @@
 
   let flipNodes = {};
   let flipTimer;
+  let currentDimText = null;
+  const DIM_ANIM_MS = 24000;
+  const DIM_RANGE = 27;
+
+  function animateDimText(now) {
+    if (currentDimText) {
+      const progress = (now % DIM_ANIM_MS) / DIM_ANIM_MS;
+      const factor = (1 - Math.cos(progress * Math.PI * 2)) / 2;
+      const base = Number(currentDimText.dataset.baseValue) || 0;
+      currentDimText.textContent = base + Math.round(factor * DIM_RANGE);
+    }
+    requestAnimationFrame(animateDimText);
+  }
+  requestAnimationFrame(animateDimText);
 
   function build() {
     const width = window.innerWidth;
