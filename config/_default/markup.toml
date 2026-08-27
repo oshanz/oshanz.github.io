@@ -5,7 +5,7 @@
   hl_Lines = ""
   lineAnchors = ""
   lineNoStart = 1
-  lineNos = true
+  lineNos = false
   lineNumbersInTable = false
   noClasses = false
   tabWidth = 2

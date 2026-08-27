@@ -6,18 +6,17 @@ tags = ["SQL", "Database", "Performance"]
 +++
 
 ```sql
-"select * from Students"
+select * from Students;
 
-"select * from Books where studentId=?"
+select * from Books where studentId = ?;
 ```
 
-Here you have 1 select statement for the student and if you have n number of students you have to fire n more queries to select the books. So at the last you have to put n+1 select statements in order to perform this operation.
+Here you have 1 select statement for the students, and if you have `n` students, you have to fire `n` more queries to fetch their books. So in total you end up with `n+1` select statements to perform this operation.
 
-Now the next question is how to solve it?
+Now the next question is: how do we solve it?
 
-Using join fetching (it will join the parent and children and fetch all the information in a single statement) we can solve the n+1 problem.
-Now our next query will look like this:
+Using join fetching — joining the parent and children and fetching everything in a single statement — we can solve the N+1 problem. Our query then looks like this:
 
 ```sql
-"from Students s join fetch s.Books b"
+select * from Students s join fetch s.Books b;
 ```

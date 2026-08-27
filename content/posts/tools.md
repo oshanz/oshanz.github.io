@@ -31,7 +31,7 @@ draft=true
 * [Tailwindcss](https://tailwindcss.com/)
 
 
-### Communicatioin
+### Communication
 - [Calendly](https://calendly.com/)
 - [Discord](https://discord.com/)
 - [Slack](https://slack.com/)

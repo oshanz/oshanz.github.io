@@ -16,6 +16,10 @@
   {{ with $themeInit }}<script>{{ .Content | safeJS }}</script>{{ end }}
   {{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
   {{ with $css }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+  {{ $highlight := resources.Get "css/highlight.css" | minify | fingerprint }}
+  {{ with $highlight }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+  {{ $highlightDark := resources.Get "css/highlight-dark.css" | minify | fingerprint }}
+  {{ with $highlightDark }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 </head>
 <body>
   <svg id="bg-particles" aria-hidden="true"></svg>

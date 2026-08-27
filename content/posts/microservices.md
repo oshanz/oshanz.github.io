@@ -13,31 +13,30 @@ draft = true
 
 ## Why
 
-- different teams/squads can work on different services
-- services can be optimized for specific workload (API, batch, etc.) (Memory optimized servers, CPU optimized servers, etc.)
-- services will be able tp deploy independently with minimal downtime
+- Different teams/squads can work on different services
+- Services can be optimized for specific workloads (API, batch, etc.) — memory-optimized servers, CPU-optimized servers, etc.
+- Services can be deployed independently with minimal downtime
 
 ## Why Not
 
-- its hard to maintain
-    - distributed transactions
-    - distributed logging, tracing and monitoring
-    - deployment is complex
+- It's hard to maintain
+    - Distributed transactions
+    - Distributed logging, tracing, and monitoring
+    - Deployment is complex
 
-- more attack surface
-    - many dependencies to update
-    - more things to secure (variables, secrets, etc.)
+- More attack surface
+    - Many dependencies to update
+    - More things to secure (variables, secrets, etc.)
 
-- network latency can affect the performance
+- Network latency can affect performance
 
--  it can slow down the development process
-    - not seasy to setup a dev environment
-    - intergration testing is hard
-    - need to make sure the new version of the service is compatible with the old version of the services that depend on it
-    - debudding may need extra effort
+- It can slow down the development process
+    - Not easy to set up a dev environment
+    - Integration testing is hard
+    - Need to make sure the new version of a service is compatible with the old versions of the services that depend on it
+    - Debugging may need extra effort
 
-
-## what are the solutions
+## What are the solutions?
 
 - start with monolith and move to microservices when you need to
 - develop as a monolith and deploy as a tuned services for specific workload

@@ -14,25 +14,23 @@ images = [
 
 ## Why
 
-* Setup the development environment in a "One click"
-* leagacy projects need different packages and host IDE may not intergrate well (linters, formatters, etc)
-* make debugging easier
-* consistent environment between developers
+* Set up the development environment in "one click"
+* Legacy projects need different package versions, and the host IDE may not integrate well with them (linters, formatters, etc.)
+* Makes debugging easier
+* Keeps the environment consistent between developers
 
-## solutions
+## Solutions
 
-1. put development environment in a container
+1. Put the development environment in a container
     - https://github.com/coder/code-server
     - https://www.eclipse.org/che/
 
-
-2. remote containers
+2. Remote containers
     - https://github.com/gitpod-io/openvscode-server
     - https://github.com/gitpod-io/gitpod
     - https://github.com/nicbet/docker-phoenix
 
-
-## reference
+## Reference
 
 * https://www.freecodecamp.org/news/put-your-dev-env-in-github/
 * https://github.com/kudulab/dojo#Why-not-just-docker-run
