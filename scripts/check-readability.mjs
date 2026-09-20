@@ -31,8 +31,7 @@ for (const file of files) {
     // Alias/redirect stub page — no article content by design, skip it.
     continue;
   }
-  const url = "https://oshanz.dev/" + relative(PUBLIC_DIR, file);
-  const dom = new JSDOM(html, { url });
+  const dom = new JSDOM(html);
   const doc = dom.window.document;
 
   const reader = isProbablyReaderable(doc);
@@ -69,6 +68,6 @@ for (const f of failures) console.log(`    - ${f.file}`);
 console.log(`  Parsed but not "readerable" (isProbablyReaderable=false): ${nonReaderable.length}`);
 for (const f of nonReaderable) console.log(`    - ${f.file} (${f.words} words)`);
 
-if (failures.length > 0) {
+if (failures.length > 0 || nonReaderable.length > 0) {
   process.exit(1);
 }
