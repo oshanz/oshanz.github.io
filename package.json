@@ -1,0 +1,7 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "jsdom": "^30.1.0"
+  }
+}

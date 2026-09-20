@@ -30,6 +30,15 @@ jobs:
       - name: Build
         run: hugo --minify --gc --enableGitInfo
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install readability check deps
+        run: bun install --frozen-lockfile
+
+      - name: Check readability
+        run: bun run scripts/check-readability.mjs
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
