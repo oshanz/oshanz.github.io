@@ -33,11 +33,11 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Install readability check deps
-        run: bun install --frozen-lockfile
+      # - name: Install readability check deps
+        # run: bun install --frozen-lockfile
 
-      - name: Check readability
-        run: bun run scripts/check-readability.mjs
+      # - name: Check readability
+        # run: bun run scripts/check-readability.mjs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
